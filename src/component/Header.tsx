@@ -5,8 +5,8 @@ const cart = ["item1", "item2", "item3"];
 
 const Header = () => {
   return (
-    <div className="flex h-16 items-center justify-between px-32 shadow">
-      <h1 className="text-3xl">TreasureCart</h1>
+    <div className="flex h-20 items-center justify-between px-12 shadow">
+      <h1 className="text-2xl">TreasureCart</h1>
       <div className="flex items-center justify-center gap-5">
         <a href="" className="relative">
           <img src={Cart} alt="cart icon" className="h-6" />
