@@ -5,21 +5,21 @@ const cart = ["item1", "item2", "item3"];
 
 const Header = () => {
   return (
-    <div className="flex h-20 items-center justify-between px-12 shadow">
-      <h1 className="text-2xl">TreasureCart</h1>
-      <div className="flex items-center justify-center gap-5">
+    <div className="flex h-20 items-center justify-between px-10 shadow">
+      <h1 className="text-lg">TreasureCart</h1>
+      <div className="flex items-center justify-center gap-4">
         <a href="" className="relative">
-          <img src={Cart} alt="cart icon" className="h-6" />
+          <img src={Cart} alt="cart icon" className="h-4" />
           {cart.length > 0 ? (
-            <div className="absolute flex items-center justify-center bottom-5 left-5 bg-[#9a9a9a] h-4 w-4 rounded-full">
-              <p className="text-xs text-white">{cart.length}</p>
+            <div className="absolute flex items-center justify-center bottom-4 left-4 bg-[#373737] h-3 w-3 rounded-full">
+              <p className="text-[7px] text-white">{cart.length}</p>
             </div>
           ) : (
             <></>
           )}
         </a>
 
-        <p className="text-lg">John Doe</p>
+        <p className="text-xs">John Doe</p>
       </div>
     </div>
   );

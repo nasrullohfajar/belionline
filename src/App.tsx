@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./index.css";
 import Header from "./component/Header";
 import HeroImage from "./component/HeroImage";

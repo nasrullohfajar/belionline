@@ -27,7 +27,7 @@ const Product = () => {
 
   return (
     <>
-      <ul className="flex text-xs gap-4 ">
+      <ul className="flex text-[9px] gap-4 ">
         <li>
           <button
             onClick={() => handleCategory("")}
