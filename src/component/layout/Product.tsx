@@ -2,25 +2,50 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../ui/ProductCard";
 
+interface productInterface {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
+}
+
 const Product = () => {
   const [productCategory, setProductCategory] = useState<string[]>([]);
   const [category, setCategory] = useState<string>("");
+  const [product, setProduct] = useState<productInterface[]>([]);
+
+  async function getData(
+    url: string,
+    setState: React.Dispatch<React.SetStateAction<any>>
+  ) {
+    try {
+      const response = await axios.get(url);
+      const data = await response.data;
+      setState(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   useEffect(() => {
-    async function getData() {
-      try {
-        const response = await axios.get(
-          "https://fakestoreapi.com/products/categories"
-        );
-        const data = await response.data;
-        setProductCategory(data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
-    getData();
+    getData("https://fakestoreapi.com/products/categories", setProductCategory);
   }, []);
+
+  useEffect(() => {
+    if (category) {
+      getData(
+        `https://fakestoreapi.com/products/category/${category}`,
+        setProduct
+      );
+    } else {
+      getData(`https://fakestoreapi.com/products`, setProduct);
+    }
+  }, [category]);
 
   function handleCategory(productCategory: string) {
     setCategory(productCategory);
@@ -51,7 +76,15 @@ const Product = () => {
         ))}
       </ul>
 
-      <ProductCard />
+      <div className="flex grid grid-cols-3 gap-2">
+        {product.map((product, index) => (
+          <ProductCard
+            name={product.title}
+            rating={product.rating.rate}
+            price={product.price}
+          />
+        ))}
+      </div>
     </div>
   );
 };
