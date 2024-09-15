@@ -52,8 +52,8 @@ const Product = () => {
   }
 
   return (
-    <div>
-      <ul className="flex text-[9px] gap-4 mb-8">
+    <div className="max-w-[1500px">
+      <ul className="flex text-[9px] lg:text-sm gap-4 lg:gap-6 mb-8">
         <li>
           <button
             onClick={() => handleCategory("")}
@@ -76,7 +76,7 @@ const Product = () => {
         ))}
       </ul>
 
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 lg:grid-cols-5  gap-2">
         {product.map((product) => (
           <ProductCard
             key={product.id}

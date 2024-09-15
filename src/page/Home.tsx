@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <HeroImage />
-      <div className="flex gap-y-10 px-6 my-8">
+      <div className="flex justify-center items-center gap-y-10 px-6 my-8">
         <Product />
       </div>
     </>

@@ -6,10 +6,12 @@ const StarRating = ({ rating }: { rating: number }) => {
   for (let i = 0; i < 5; i++) {
     const currentRating = rating - i;
     if (currentRating >= 1) {
-      stars.push(<FaStar key={i} className="text-yellow-400 w-2 h-2" />);
+      stars.push(
+        <FaStar key={i} className="text-yellow-400 w-2 lg:w-4 h-2 lg:h-4" />
+      );
     } else if (currentRating > 0) {
       stars.push(
-        <div key={i} className="relative w-2 h-2">
+        <div key={i} className="relative w-2 lg:w-4 h-2 lg:h-4">
           <FaStar className="text-gray-300 absolute w-full h-full" />
           <FaStar
             className="text-yellow-400 absolute w-full h-full"
@@ -20,7 +22,9 @@ const StarRating = ({ rating }: { rating: number }) => {
         </div>
       );
     } else {
-      stars.push(<FaStar key={i} className="text-gray-300 w-2 h-2" />);
+      stars.push(
+        <FaStar key={i} className="text-gray-300 w-2 lg:w-4 h-2 lg:h-4" />
+      );
     }
   }
 
