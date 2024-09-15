@@ -1,4 +1,4 @@
-import Cart from "../assets/cart.png";
+import Cart from "../../assets/cart.png";
 
 const cart = ["item1", "item2", "item3"];
 // const cart = [];

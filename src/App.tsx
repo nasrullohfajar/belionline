@@ -1,16 +1,12 @@
 import "./index.css";
-import Header from "./component/Header";
-import HeroImage from "./component/HeroImage";
-import Product from "./component/Product";
+import Header from "./component/layout/Header";
+import Home from "./page/Home";
 
 function App() {
   return (
     <>
       <Header />
-      <HeroImage />
-      <div className="flex gap-y-10 px-6 my-8">
-        <Product />
-      </div>
+      <Home />
     </>
   );
 }
