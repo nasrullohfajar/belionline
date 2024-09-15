@@ -76,9 +76,11 @@ const Product = () => {
         ))}
       </ul>
 
-      <div className="flex grid grid-cols-3 gap-2">
-        {product.map((product, index) => (
+      <div className="grid grid-cols-3 gap-2">
+        {product.map((product) => (
           <ProductCard
+            key={product.id}
+            image={product.image}
             name={product.title}
             rating={product.rating.rate}
             price={product.price}
