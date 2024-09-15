@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ProductCard from "../ui/ProductCard";
 
 const Product = () => {
   const [productCategory, setProductCategory] = useState<string[]>([]);
@@ -26,8 +27,8 @@ const Product = () => {
   }
 
   return (
-    <>
-      <ul className="flex text-[9px] gap-4 ">
+    <div>
+      <ul className="flex text-[9px] gap-4 mb-8">
         <li>
           <button
             onClick={() => handleCategory("")}
@@ -49,7 +50,9 @@ const Product = () => {
           </li>
         ))}
       </ul>
-    </>
+
+      <ProductCard />
+    </div>
   );
 };
 
