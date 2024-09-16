@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import DetailProductImage from "./DetailProductImage";
+import DetailProductDescription from "./DetailProductDescription";
 import getData from "../../utils/getData";
 import { productInterface } from "../../types/types";
 
@@ -14,9 +15,18 @@ const DetailProduct = () => {
   }, [id]);
 
   return (
-    <div className="">
+    <>
       <DetailProductImage image={productDetail?.image} />
-    </div>
+
+      {productDetail && (
+        <DetailProductDescription
+          title={productDetail?.title}
+          rating={productDetail?.rating}
+          price={productDetail?.price}
+          description={productDetail?.description}
+        />
+      )}
+    </>
   );
 };
 
