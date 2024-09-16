@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import DetailProductImage from "../component/ui/DetailProductImage";
-import getData from "../utils/getData";
-import { productInterface } from "../types/types";
+import DetailProductImage from "./DetailProductImage";
+import getData from "../../utils/getData";
+import { productInterface } from "../../types/types";
 
 const DetailProduct = () => {
   const params = useParams();

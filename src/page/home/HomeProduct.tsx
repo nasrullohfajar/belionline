@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import getData from "../../utils/getData";
-import ProductCard from "../ui/ProductCard";
+import ProductCard from "../../component/ui/ProductCard";
 import { useNavigate } from "react-router-dom";
 import { productInterface } from "../../types/types";
 
