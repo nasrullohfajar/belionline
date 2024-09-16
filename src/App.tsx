@@ -1,12 +1,17 @@
+import { Routes, Route } from "react-router-dom";
 import "./index.css";
 import Header from "./component/layout/Header";
 import Home from "./page/Home";
+import DetailProduct from "./page/DetailProduct";
 
 function App() {
   return (
     <>
       <Header />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/detail/:id" element={<DetailProduct />} />
+      </Routes>
     </>
   );
 }

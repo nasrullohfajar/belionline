@@ -1,23 +1,19 @@
 import { useEffect, useState } from "react";
 import getData from "../../utils/getData";
 import ProductCard from "../ui/ProductCard";
-
-interface productInterface {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
-}
+import { useNavigate } from "react-router-dom";
+import { productInterface } from "../../types/types";
 
 const Product = () => {
   const [productCategory, setProductCategory] = useState<string[]>([]);
   const [category, setCategory] = useState<string>("");
   const [product, setProduct] = useState<productInterface[]>([]);
+
+  const navigate = useNavigate();
+
+  function handleDetailPage(id: number) {
+    navigate(`/detail/${id}`);
+  }
 
   useEffect(() => {
     getData("https://fakestoreapi.com/products/categories", setProductCategory);
@@ -71,6 +67,7 @@ const Product = () => {
             name={product.title}
             rating={product.rating.rate}
             price={product.price}
+            onClick={() => handleDetailPage(product.id)}
           />
         ))}
       </div>

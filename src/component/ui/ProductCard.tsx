@@ -5,11 +5,18 @@ interface ProductCardInterface {
   name: string;
   rating: number;
   price: number;
+  onClick: any;
 }
 
-const ProductCard = ({ name, rating, price, image }: ProductCardInterface) => {
+const ProductCard = ({
+  name,
+  rating,
+  price,
+  image,
+  onClick,
+}: ProductCardInterface) => {
   return (
-    <button className="w-28 lg:w-56 h-52 lg:h-72 border">
+    <button className="w-28 lg:w-56 h-52 lg:h-72 border" onClick={onClick}>
       <div
         className="h-36 lg:h-48 bg-center bg-no-repeat overflow-hidden bg-70% lg:bg-40%"
         style={{ backgroundImage: `url(${image})` }}
