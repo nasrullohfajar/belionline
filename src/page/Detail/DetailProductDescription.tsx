@@ -34,12 +34,6 @@ const DetailProductDescription = ({
         <p className="text-sm">Description</p>
         <p className="text-xs text-[#646464]">{description}</p>
       </div>
-
-      <div>
-        <button className="absolute bottom-0 left-0 w-full h-12 bg-[#222222] text-sm text-white">
-          Add To Cart
-        </button>
-      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import DetailProductImage from "./DetailProductImage";
 import DetailProductDescription from "./DetailProductDescription";
+import ButtonBack from "../../component/ui/ButtonBack";
 import getData from "../../utils/getData";
 import { productInterface } from "../../types/types";
 
@@ -16,6 +17,8 @@ const DetailProduct = () => {
 
   return (
     <>
+      <ButtonBack page={"product"} />
+
       <DetailProductImage image={productDetail?.image} />
 
       {productDetail && (

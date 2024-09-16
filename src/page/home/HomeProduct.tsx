@@ -36,7 +36,7 @@ const Product = () => {
 
   return (
     <div className="max-w-[1500px">
-      <ul className="flex text-[9px] lg:text-sm gap-4 lg:gap-6 mb-8">
+      <ul className="flex text-[9px] lg:text-sm justify-between lg:gap-6 mb-8">
         <li>
           <button
             onClick={() => handleCategory("")}
