@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import getData from "../../utils/getData";
 import ProductCard from "../ui/ProductCard";
 
 interface productInterface {
@@ -18,19 +18,6 @@ const Product = () => {
   const [productCategory, setProductCategory] = useState<string[]>([]);
   const [category, setCategory] = useState<string>("");
   const [product, setProduct] = useState<productInterface[]>([]);
-
-  async function getData(
-    url: string,
-    setState: React.Dispatch<React.SetStateAction<any>>
-  ) {
-    try {
-      const response = await axios.get(url);
-      const data = await response.data;
-      setState(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   useEffect(() => {
     getData("https://fakestoreapi.com/products/categories", setProductCategory);
