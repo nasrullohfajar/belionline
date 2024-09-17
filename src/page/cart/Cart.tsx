@@ -56,22 +56,26 @@ const Cart = () => {
   const cartProducts = getCartProducts();
 
   return (
-    <div className="max-w-[1500px] px-6">
+    <div className="px-6">
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <>
           <ButtonBack page={"Cart"} />
-          {cartProducts.map((cartProduct) => (
-            <CartItem
-              key={cartProduct.id}
-              title={cartProduct.title}
-              price={cartProduct.price}
-              image={cartProduct.image}
-              quantity={cartProduct.quantity}
-            />
-          ))}
-        </div>
+          <div className="flex items-center justify-center">
+            <div className="max-w-[1500px] ">
+              {cartProducts.map((cartProduct) => (
+                <CartItem
+                  key={cartProduct.id}
+                  title={cartProduct.title}
+                  price={cartProduct.price}
+                  image={cartProduct.image}
+                  quantity={cartProduct.quantity}
+                />
+              ))}
+            </div>
+          </div>
+        </>
       )}
     </div>
   );
