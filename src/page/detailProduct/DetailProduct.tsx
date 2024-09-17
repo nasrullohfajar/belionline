@@ -26,7 +26,7 @@ const DetailProduct = () => {
         <div className="lg:px-6">
           <ButtonBack page={"Product"} />
           <div className="lg:flex lg:items-center lg:justify-center lg:px-6">
-            <div className="flex flex-col max-w-[1000px] lg:gap-x-10 lg:flex-row">
+            <div className="flex flex-col max-w-[1500px] lg:gap-x-10 lg:flex-row">
               <DetailProductImage image={productDetail?.image} />
 
               {productDetail && (

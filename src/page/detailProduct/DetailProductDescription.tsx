@@ -17,12 +17,12 @@ const DetailProductDescription = ({
   description,
 }: productDesctionInterface) => {
   return (
-    <div className="p-6 lg:px-6 lg:py-0 space-y-12 lg:w-[50%]">
+    <div className="p-6 lg:px-6 lg:py-0 space-y-12 lg:w-[600px]">
       <div className="space-y-2">
         <p className="text-lg">{title}</p>
         <div className="flex items-center justify-start gap-x-1 mb-2">
           <StarRating rating={rating.rate} />
-          <p className="text-[8px] lg:text-xs">
+          <p className="text-[8px] lg:text-xs ml-2">
             <span>{rating.rate}</span>
             <span> ({rating.count} rating)</span>
           </p>
