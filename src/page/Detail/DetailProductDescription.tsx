@@ -22,7 +22,7 @@ const DetailProductDescription = ({
         <p className="text-lg">{title}</p>
         <div className="flex items-center justify-start gap-x-1 mb-2">
           <StarRating rating={rating.rate} />
-          <p className="text-[8px]">
+          <p className="text-[8px] lg:text-xs">
             <span>{rating.rate}</span>
             <span> ({rating.count} rating)</span>
           </p>
