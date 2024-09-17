@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./index.css";
 import Header from "./component/layout/Header";
 import Home from "./page/home/Home";
-import DetailProduct from "./page/detail/DetailProduct";
+import DetailProduct from "./page/detailProduct/DetailProduct";
 import Cart from "./page/cart/Cart";
 
 function App() {
