@@ -23,19 +23,22 @@ const DetailProduct = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div>
-          <ButtonBack page={"product"} />
+        <div className="lg:px-6">
+          <ButtonBack page={"Product"} />
+          <div className="lg:flex lg:items-center lg:justify-center lg:px-6">
+            <div className="flex flex-col max-w-[1000px] lg:gap-x-10 lg:flex-row">
+              <DetailProductImage image={productDetail?.image} />
 
-          <DetailProductImage image={productDetail?.image} />
-
-          {productDetail && (
-            <DetailProductDescription
-              title={productDetail?.title}
-              rating={productDetail?.rating}
-              price={productDetail?.price}
-              description={productDetail?.description}
-            />
-          )}
+              {productDetail && (
+                <DetailProductDescription
+                  title={productDetail?.title}
+                  rating={productDetail?.rating}
+                  price={productDetail?.price}
+                  description={productDetail?.description}
+                />
+              )}
+            </div>
+          </div>
         </div>
       )}
     </>

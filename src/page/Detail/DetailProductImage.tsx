@@ -1,7 +1,7 @@
 const DetailProductImage = ({ image }: { image: string | undefined }) => {
   return (
     <div
-      className="h-56 bg-center bg-30% bg-no-repeat border"
+      className="h-56 lg:h-[calc(100vh-192px)] lg:w-[50%] bg-center bg-30% lg:bg-60% bg-no-repeat border"
       style={{ backgroundImage: `url(${image})` }}
     ></div>
   );

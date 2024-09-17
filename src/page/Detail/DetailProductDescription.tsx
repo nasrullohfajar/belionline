@@ -17,7 +17,7 @@ const DetailProductDescription = ({
   description,
 }: productDesctionInterface) => {
   return (
-    <div className="p-6 space-y-12">
+    <div className="p-6 lg:px-6 lg:py-0 space-y-12 lg:w-[50%]">
       <div className="space-y-2">
         <p className="text-lg">{title}</p>
         <div className="flex items-center justify-start gap-x-1 mb-2">

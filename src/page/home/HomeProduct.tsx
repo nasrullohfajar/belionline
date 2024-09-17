@@ -39,12 +39,12 @@ const Product = () => {
   }
 
   return (
-    <div className="max-w-[1500px">
+    <div className="max-w-[1500px]">
       {loading ? (
         <Loading />
       ) : (
         <div>
-          <ul className="flex text-[9px] lg:text-sm justify-between lg:gap-6 mb-8">
+          <ul className="flex text-[9px] lg:text-sm justify-between lg:justify-start lg:gap-6 mb-8">
             <li>
               <button
                 onClick={() => handleCategory("")}
